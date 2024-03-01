@@ -1,6 +1,9 @@
-import { Garagem } from "./Componentes/Garagem";
+import React from "react";
+import { Garagem } from "./Componentes/Garagem/Garagem";
+import { GlobalStyle } from "./GlobalStyle";
 
 export default function App() {
+    
   const nome = "Labenu";
 
   function apresentaGaragem() {
@@ -8,8 +11,11 @@ export default function App() {
   }
 
   return (
+    <>
+    <GlobalStyle />
     <div className="App">
       <Garagem nome={nome} mensagemAprentacao={apresentaGaragem} />
     </div>
+    </>
   );
 }
